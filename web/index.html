@@ -53,13 +53,43 @@
             document.getElementById("mySidenav").style.width = "0";
         }
 
+        function Megu(){
+            document.getElementById("animegif").src = "megu.gif";
+        }
+
+        function Chika(){
+            document.getElementById("animegif").src = "chika.gif";
+        }
+
+        function Zerotwo(){
+            document.getElementById("animegif").src = "zerotwo.gif";
+        }
+
+        eel.expose(rename);
+        function rename(title){
+            title = title.replace('.mp3','');
+            document.getElementById("songTitle").innerHTML = title;                        
+        }
+
+
     </script>
 
 </head>
 <body>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <h1>About</h1>        
+        <div class="sidecontent">
+            <h1>Rizumu</h1>
+            <br>
+            <ul>
+                <li><button onclick="Megu()" >Megumin</button></li>
+                <li><button onclick="Zerotwo()" >Zero Two</button></li>
+                <li><button onclick="Chika()" >Chika</button></li>
+            </ul>
+
+        </div>
+        
+        
       </div>
       
       <!-- Use any element to open the sidenav -->
@@ -67,7 +97,10 @@
 
     <div class="container">
         <div class="leftdiv">
-            <h1 id="songTitle">Title</h1>
+            <div class="textdiv">
+                <h1 id="songTitle">Title</h1>
+            </div>
+            
             
             <div class="buttons">
                 <button id="pre" onclick="jsPlayPrevious()"><i class="fas fa-step-backward fa-lg"></i></button>
@@ -77,9 +110,10 @@
 
         </div>
             
-            <img src="megu.gif">
+            <img id="animegif" src="megu.gif">
        
     </div>
     <!-- <script src="main.js"></script> -->
+    <p>Version 2.1</p>
 </body>
 </html>

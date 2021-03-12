@@ -60,6 +60,7 @@ def nextTrack():
     i += 1
     pygame.mixer.music.load(str(filepath + playlist[i]))
     pygame.mixer.music.play()
+    eel.rename(playlist[i])
     print("Playing next")
 
 # Implements the previous button activity
@@ -70,6 +71,7 @@ def previousTrack():
         i = i - 1
         pygame.mixer.music.load(str(filepath + playlist[i]))
         pygame.mixer.music.play()
+        eel.rename(playlist[i])
         print("Playing previous")
 
 
@@ -83,6 +85,7 @@ eel.init('web')
 StartUp()
 # Renders the window
 eel.start('index.html', block=False)
+eel.rename(playlist[i])
 
 # Loop after loading the window
 while True:
