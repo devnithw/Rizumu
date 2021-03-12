@@ -11,3 +11,4 @@ This application was built using the [Python Eel](https://github.com/ChrisKnott/
 - Windows 10
 - Google Chrome
 - Must contain music as .mp3 files in the User Music folder
+- Internet connection (Offline playability will be resolved in future versions)
