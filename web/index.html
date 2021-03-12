@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizumu</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src=http://connect.soundcloud.com/sdk.js></script>
+    <script src="https://kit.fontawesome.com/03ca44ad11.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type ="text/javascript">
+        // window.onload = jsStartUp;
+        let isPlaying = true;
+        
+        function jsStartUp() {
+            eel.StartUp();
+            isPlaying = true;
+        }
+
+        function jsPlayNext(){
+            eel.nextTrack();
+            document.getElementById("playpause").className = "fas fa-pause fa-lg";
+        }
+
+        function jsPlayPrevious(){
+            eel.previousTrack();
+            document.getElementById("playpause").className = "fas fa-pause fa-lg";
+        }
+        
+        
+        function jsPlayPause(){
+
+            eel.PlayPause();
+            if(!isPlaying){
+                isPlaying = true;
+                document.getElementById("playpause").className = "fas fa-pause fa-lg";
+            }
+            else{
+                isPlaying = false;
+                document.getElementById("playpause").className = "fas fa-play fa-lg";
+            }
+        }
+
+
+
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h1>About</h1>        
+      </div>
+      
+      <!-- Use any element to open the sidenav -->
+      <button onclick="openNav()" id="playlist"><i class="fas fa-music fa-lg"></i></button>
+
+    <div class="container">
+        <div class="leftdiv">
+            <h1 id="songTitle">Title</h1>
+            
+            <div class="buttons">
+                <button id="pre" onclick="jsPlayPrevious()"><i class="fas fa-step-backward fa-lg"></i></button>
+                <button id="play" onclick="jsPlayPause()"><i  id="playpause" class="fas fa-pause fa-lg"></i></button>
+                <button id="next" onclick="jsPlayNext()"><i class="fas fa-step-forward fa-lg"></i></button>
+            </div>
+
+        </div>
+            
+            <img src="megu.gif">
+       
+    </div>
+    <!-- <script src="main.js"></script> -->
+</body>
+</html>
