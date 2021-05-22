@@ -5,8 +5,6 @@ Rizumu is a music player desktop GUI application developed using Python, HTML, C
 
 How to build your own - [Read Article](https://devnith.medium.com/building-a-music-player-gui-application-with-python-7c3b03f812fc)
 
-![Gif of Rizumu](https://media.giphy.com/media/3qoJotnmOjzU6fgjrE/giphy.gif)
-
 This application was built using the [Python Eel](https://github.com/ChrisKnott/Eel) Module and Pygame module
 
 The current version is still a development version. Activate Python virtual environment before running.
